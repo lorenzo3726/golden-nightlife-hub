@@ -1,6 +1,7 @@
+import drinkTropical from '@/assets/drink-tropical.jpg';
+
 const drink1 = "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80";
 const drink2 = "https://images.unsplash.com/photo-1575037614876-c38a4d44f5b8?auto=format&fit=crop&w=800&q=80";
-const drink3 = "https://images.unsplash.com/photo-1599021464303-125032b8aa8d?auto=format&fit=crop&w=800&q=80";
 
 const DrinksSection = () => {
   const drinks = [
@@ -17,7 +18,7 @@ const DrinksSection = () => {
       description: 'Selezione curata di birre speciali. Ogni sorso, un viaggio.',
     },
     {
-      image: drink3,
+      image: drinkTropical,
       name: 'Tropical Mood',
       mood: 'Per chi vuole osare',
       description: 'Colore, freschezza e un tocco di follia. Estate tutto l\'anno.',
