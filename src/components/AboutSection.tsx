@@ -1,4 +1,45 @@
+import { useState, useEffect, useRef } from 'react';
 import { Music, Users, GlassWater } from 'lucide-react';
+
+const AnimatedCounter = ({ end, duration = 2000, suffix = '' }: { end: number, duration?: number, suffix?: string }) => {
+  const [count, setCount] = useState(0);
+  const elementRef = useRef<HTMLSpanElement>(null);
+  const animating = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !animating.current) {
+          animating.current = true;
+          let startTime: number | null = null;
+
+          const step = (timestamp: number) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+
+            setCount(Math.floor(progress * end));
+
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            }
+          };
+
+          window.requestAnimationFrame(step);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [end, duration]);
+
+  return <span ref={elementRef}>{count}{suffix}</span>;
+};
 
 const AboutSection = () => {
   const features = [
@@ -33,20 +74,20 @@ const AboutSection = () => {
                 Il Golden Bar
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Non siamo un locale qualsiasi. Siamo il posto dove la notte prende forma, 
+                Non siamo un locale qualsiasi. Siamo il posto dove la notte prende forma,
                 dove ogni drink è un invito e ogni serata un capitolo da ricordare.
               </p>
             </div>
 
             <p className="text-muted-foreground leading-relaxed">
-              Nel cuore di Galatina, lontano dal caos ma vicino a tutto quello che conta. 
+              Nel cuore di Galatina, lontano dal caos ma vicino a tutto quello che conta.
               Un ambiente curato ma mai pretenzioso, dove sentirti a casa anche se è la prima volta.
             </p>
 
             {/* Features */}
             <div className="space-y-6 pt-4">
               {features.map((feature, index) => (
-                <div 
+                <div
                   key={feature.title}
                   className="flex items-start gap-4 group"
                 >
@@ -68,7 +109,7 @@ const AboutSection = () => {
               {/* Decorative Border */}
               <div className="absolute inset-0 border-2 border-primary/20 rounded-2xl transform rotate-3" />
               <div className="absolute inset-0 border-2 border-primary/10 rounded-2xl transform -rotate-3" />
-              
+
               {/* Main Box */}
               <div className="relative h-full card-glass rounded-2xl p-8 flex flex-col justify-center items-center text-center">
                 <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-6 glow-gold-subtle">
@@ -80,15 +121,19 @@ const AboutSection = () => {
                 <p className="text-muted-foreground">
                   Anni di serate, storie e drink perfetti. E questo è solo l'inizio.
                 </p>
-                
+
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-border w-full">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">100+</div>
+                    <div className="text-2xl font-bold text-primary">
+                      <AnimatedCounter end={100} suffix="+" />
+                    </div>
                     <div className="text-xs text-muted-foreground uppercase tracking-wide">Cocktail</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">7</div>
+                    <div className="text-2xl font-bold text-primary">
+                      <AnimatedCounter end={7} />
+                    </div>
                     <div className="text-xs text-muted-foreground uppercase tracking-wide">Anni</div>
                   </div>
                   <div className="text-center">

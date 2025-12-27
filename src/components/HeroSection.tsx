@@ -13,7 +13,7 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
@@ -36,7 +36,7 @@ const HeroSection = () => {
           </div>
 
           {/* Main Title */}
-          <h1 
+          <h1
             className="opacity-0 animate-fade-in text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight"
             style={{ animationDelay: '0.4s' }}
           >
@@ -46,29 +46,31 @@ const HeroSection = () => {
           </h1>
 
           {/* Subtitle */}
-          <p 
+          <p
             className="opacity-0 animate-fade-in text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
             style={{ animationDelay: '0.6s' }}
           >
-            Dove ogni sera diventa un ricordo. 
+            Dove ogni sera diventa un ricordo.
             Drink, musica e la compagnia giusta sotto le luci dorate.
           </p>
 
           {/* CTA */}
-          <div 
+          <div
             className="opacity-0 animate-fade-in flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
             style={{ animationDelay: '0.8s' }}
           >
-            <Button 
-              variant="golden" 
+            <Button
+              variant="golden"
               size="lg"
+              className="w-full sm:w-64"
               onClick={scrollToGoldenHour}
             >
               Scopri la Golden Hour
             </Button>
-            <Button 
-              variant="golden-outline" 
+            <Button
+              variant="golden-outline"
               size="lg"
+              className="w-full sm:w-64"
               onClick={() => document.querySelector('#drinks')?.scrollIntoView({ behavior: 'smooth' })}
             >
               I Nostri Drink
@@ -78,8 +80,8 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: '1.2s' }}>
-        <button 
+      <div className="absolute bottom-8 w-full flex justify-center opacity-0 animate-fade-in" style={{ animationDelay: '1.2s' }}>
+        <button
           onClick={scrollToGoldenHour}
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
         >

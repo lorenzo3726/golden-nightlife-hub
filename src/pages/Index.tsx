@@ -4,6 +4,7 @@ import GoldenHourSection from '@/components/GoldenHourSection';
 import AboutSection from '@/components/AboutSection';
 import DrinksSection from '@/components/DrinksSection';
 import LocationSection from '@/components/LocationSection';
+import SportsSection from '@/components/SportsSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -12,8 +13,9 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <GoldenHourSection />
-      <AboutSection />
+      <SportsSection />
       <DrinksSection />
+      <AboutSection />
       <LocationSection />
       <Footer />
     </div>
