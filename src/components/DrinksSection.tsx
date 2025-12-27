@@ -1,6 +1,6 @@
-import drink1 from '@/assets/drink-1.jpg';
-import drink2 from '@/assets/drink-2.jpg';
-import drink3 from '@/assets/drink-3.jpg';
+const drink1 = "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80";
+const drink2 = "https://images.unsplash.com/photo-1575037614876-c38a4d44f5b8?auto=format&fit=crop&w=800&q=80";
+const drink3 = "https://images.unsplash.com/photo-1563223171-897db66d7ad1?auto=format&fit=crop&w=800&q=80";
 
 const DrinksSection = () => {
   const drinks = [
@@ -46,15 +46,15 @@ const DrinksSection = () => {
         {/* Drinks Grid */}
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {drinks.map((drink, index) => (
-            <div 
+            <div
               key={drink.name}
               className="group relative"
             >
               <div className="card-glass rounded-2xl overflow-hidden transition-all duration-500 hover:scale-105 hover:glow-gold-subtle">
                 {/* Image */}
                 <div className="relative aspect-[4/5] overflow-hidden">
-                  <img 
-                    src={drink.image} 
+                  <img
+                    src={drink.image}
                     alt={drink.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
