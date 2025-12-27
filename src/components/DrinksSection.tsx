@@ -1,6 +1,6 @@
 const drink1 = "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80";
 const drink2 = "https://images.unsplash.com/photo-1575037614876-c38a4d44f5b8?auto=format&fit=crop&w=800&q=80";
-const drink3 = "https://images.unsplash.com/photo-1563223171-897db66d7ad1?auto=format&fit=crop&w=800&q=80";
+const drink3 = "https://images.unsplash.com/photo-1599021464303-125032b8aa8d?auto=format&fit=crop&w=800&q=80";
 
 const DrinksSection = () => {
   const drinks = [
