@@ -42,7 +42,7 @@ const HeroSection = () => {
           >
             <span className="text-foreground">La Notte Inizia al</span>
             <br />
-            <span className="text-primary">Golden Bar</span>
+            <span className="text-primary font-display">Golden Bar</span>
           </h1>
 
           {/* Subtitle */}
@@ -63,7 +63,6 @@ const HeroSection = () => {
               variant="golden" 
               size="lg"
               onClick={scrollToGoldenHour}
-              className="w-full sm:w-56"
             >
               Scopri la Golden Hour
             </Button>
@@ -71,7 +70,6 @@ const HeroSection = () => {
               variant="golden-outline" 
               size="lg"
               onClick={() => document.querySelector('#drinks')?.scrollIntoView({ behavior: 'smooth' })}
-              className="w-full sm:w-56"
             >
               I Nostri Drink
             </Button>
