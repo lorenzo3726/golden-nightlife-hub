@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
-import heroBg from '@/assets/hero-bg.jpg';
+import heroBg from '@/assets/hero-bg-new.jpg';
 
 const HeroSection = () => {
   const scrollToGoldenHour = () => {
@@ -61,17 +61,17 @@ const HeroSection = () => {
           >
             <Button 
               variant="golden" 
-              size="xl"
+              size="lg"
               onClick={scrollToGoldenHour}
-              className="min-w-[200px]"
+              className="w-full sm:w-56"
             >
               Scopri la Golden Hour
             </Button>
             <Button 
               variant="golden-outline" 
-              size="xl"
+              size="lg"
               onClick={() => document.querySelector('#drinks')?.scrollIntoView({ behavior: 'smooth' })}
-              className="min-w-[200px]"
+              className="w-full sm:w-56"
             >
               I Nostri Drink
             </Button>
