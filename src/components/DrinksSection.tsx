@@ -33,14 +33,14 @@ const DrinksSection = () => {
       <div className="relative z-10 container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary text-sm uppercase tracking-[0.3em] mb-4 block">
-            I Protagonisti
+          <span className="text-primary text-sm uppercase tracking-wider mb-4 block">
+            Per chi ha sete
           </span>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-            Drink & Mood
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            La nostra selezione
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            Non è solo cosa bevi. È come ti fa sentire.
+            Dalla birra artigianale ai cocktail classici, scegli il tuo preferito.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ const DrinksSection = () => {
                   <span className="text-primary/80 text-xs uppercase tracking-widest">
                     {drink.mood}
                   </span>
-                  <h3 className="text-xl font-serif font-bold text-foreground mt-2 mb-3">
+                  <h3 className="text-xl font-bold text-foreground mt-2 mb-3">
                     {drink.name}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
@@ -81,8 +81,8 @@ const DrinksSection = () => {
 
         {/* Bottom Text */}
         <div className="text-center mt-16">
-          <p className="text-muted-foreground italic">
-            E molto altro ti aspetta al bancone...
+          <p className="text-muted-foreground">
+            Passa a trovarci al bancone!
           </p>
         </div>
       </div>

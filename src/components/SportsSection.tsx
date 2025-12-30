@@ -13,23 +13,23 @@ const SportsSection = () => {
                     {/* Content */}
                     <div className="space-y-8">
                         <div>
-                            <span className="text-primary text-sm uppercase tracking-[0.3em] mb-4 block">
+                            <span className="text-primary text-sm uppercase tracking-wider mb-4 block">
                                 Live Match Day
                             </span>
-                            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-                                Le Grandi Partite <br />
+                            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                                Le Partite più Belle <br />
                                 <span className="text-primary">in Diretta</span>
                             </h2>
                             <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-                                Non perderti neanche un gol. Serie A, Champions League e le migliori sfide internazionali sui nostri schermi.
-                                Tutto questo gratuitamente, accompagnato dai tuoi drink preferiti.
+                                Vieni a tifare con noi! Serie A, Champions e i grandi eventi sportivi in diretta sui nostri schermi.
+                                Birra in mano e buona compagnia, non serve altro.
                             </p>
                         </div>
 
                         <div className="grid sm:grid-cols-2 gap-6">
                             <div className="card-glass p-6 rounded-xl space-y-3 group hover:border-primary/50 transition-colors">
                                 <Tv className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
-                                <h3 className="font-serif font-bold text-xl text-foreground">Maxi Schermi</h3>
+                                <h3 className="font-bold text-xl text-foreground">Ti vedi tutto bene</h3>
                                 <p className="text-sm text-muted-foreground">
                                     Alta definizione per non perdere nessun dettaglio dell'azione.
                                 </p>
@@ -37,7 +37,7 @@ const SportsSection = () => {
 
                             <div className="card-glass p-6 rounded-xl space-y-3 group hover:border-primary/50 transition-colors">
                                 <Beer className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
-                                <h3 className="font-serif font-bold text-xl text-foreground">Beer & Match</h3>
+                                <h3 className="font-bold text-xl text-foreground">Birra e Tifo</h3>
                                 <p className="text-sm text-muted-foreground">
                                     La birra perfetta per tifare la tua squadra del cuore.
                                 </p>
@@ -67,8 +67,8 @@ const SportsSection = () => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <h3 className="text-2xl font-serif font-bold text-foreground">
-                                        Prossimi Eventi
+                                    <h3 className="text-2xl font-bold text-foreground">
+                                        Il Gioco Continua
                                     </h3>
                                     <p className="text-muted-foreground">
                                         Seguici sui social per il calendario settimanale

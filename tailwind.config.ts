@@ -71,8 +71,8 @@ export default {
       },
       fontFamily: {
         sans: ['Outfit', 'sans-serif'],
-        serif: ['Cormorant Garamond', 'serif'],
-        display: ['Cinzel', 'serif'],
+        serif: ['Outfit', 'sans-serif'],
+        display: ['Outfit', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -21,28 +21,24 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50" />
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-1/4 left-10 w-px h-32 bg-gradient-to-b from-transparent via-primary/50 to-transparent hidden md:block" />
-      <div className="absolute top-1/3 right-10 w-px h-48 bg-gradient-to-b from-transparent via-primary/30 to-transparent hidden md:block" />
-
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Pre-title */}
           <div className="opacity-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <span className="inline-block text-primary/80 text-sm md:text-base uppercase tracking-[0.3em] font-medium">
+            <span className="inline-block text-primary/80 text-sm md:text-base uppercase tracking-wider font-medium">
               Galatina • Lecce
             </span>
           </div>
 
           {/* Main Title */}
           <h1
-            className="opacity-0 animate-fade-in text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight"
+            className="opacity-0 animate-fade-in text-4xl md:text-6xl lg:text-7xl font-bold leading-tight"
             style={{ animationDelay: '0.4s' }}
           >
-            <span className="text-foreground">La Notte Inizia al</span>
+            <span className="text-foreground">Ci vediamo al</span>
             <br />
-            <span className="text-primary font-display">Golden Bar</span>
+            <span className="text-primary">Golden Bar</span>
           </h1>
 
           {/* Subtitle */}
@@ -50,8 +46,8 @@ const HeroSection = () => {
             className="opacity-0 animate-fade-in text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
             style={{ animationDelay: '0.6s' }}
           >
-            Dove ogni sera diventa un ricordo.
-            Drink, musica e la compagnia giusta sotto le luci dorate.
+            Il posto giusto per staccare la spina.
+            Birra fresca, ottimi drink e l'atmosfera che cerchi.
           </p>
 
           {/* CTA */}
@@ -65,7 +61,7 @@ const HeroSection = () => {
               className="w-full sm:w-64"
               onClick={scrollToGoldenHour}
             >
-              Scopri la Golden Hour
+              Golden Hour
             </Button>
             <Button
               variant="golden-outline"
@@ -73,7 +69,7 @@ const HeroSection = () => {
               className="w-full sm:w-64"
               onClick={() => document.querySelector('#drinks')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              I Nostri Drink
+              Cosa si beve?
             </Button>
           </div>
         </div>

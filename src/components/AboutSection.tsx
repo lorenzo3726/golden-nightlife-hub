@@ -45,18 +45,18 @@ const AboutSection = () => {
   const features = [
     {
       icon: GlassWater,
-      title: 'Drink d\'Autore',
-      description: 'Cocktail classici e creazioni originali. Ogni sorso racconta una storia.',
+      title: 'Drink Buoni',
+      description: 'Dai classici alle nostre invenzioni, qui non resti mai a secco.',
     },
     {
       icon: Music,
-      title: 'Sound Notturno',
-      description: 'La playlist giusta per ogni momento. Mai troppo alta, mai troppo bassa.',
+      title: 'Buona Musica',
+      description: 'Sempre il sottofondo giusto, perfetto per parlare e rilassarsi.',
     },
     {
       icon: Users,
-      title: 'Gente Vera',
-      description: 'Un posto dove tornare. Perché qui trovi sempre facce amiche.',
+      title: 'Facce Amiche',
+      description: 'Torni perché qui ti senti tra amici, ogni volta.',
     },
   ];
 
@@ -67,21 +67,21 @@ const AboutSection = () => {
           {/* Text Content */}
           <div className="space-y-8">
             <div>
-              <span className="text-primary text-sm uppercase tracking-[0.3em] mb-4 block">
-                Il Nostro Mondo
+              <span className="text-primary text-sm uppercase tracking-wider mb-4 block">
+                Chi Siamo
               </span>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-                Il Golden Bar
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Passa al Golden
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Non siamo un locale qualsiasi. Siamo il posto dove la notte prende forma,
-                dove ogni drink è un invito e ogni serata un capitolo da ricordare.
+                Non siamo il solito bar. Siamo il posto giusto per bersi una cosa in tranquillità,
+                fare due chiacchiere e godersi la serata.
               </p>
             </div>
 
             <p className="text-muted-foreground leading-relaxed">
-              Nel cuore di Galatina, lontano dal caos ma vicino a tutto quello che conta.
-              Un ambiente curato ma mai pretenzioso, dove sentirti a casa anche se è la prima volta.
+              Siamo nel cuore di Galatina. Un ambiente alla mano dove ti senti a casa fin dal primo momento.
+              Semplice, accogliente, vero.
             </p>
 
             {/* Features */}
@@ -113,13 +113,13 @@ const AboutSection = () => {
               {/* Main Box */}
               <div className="relative h-full card-glass rounded-2xl p-8 flex flex-col justify-center items-center text-center">
                 <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-6 glow-gold-subtle">
-                  <span className="text-4xl font-serif font-bold text-primary">G</span>
+                  <span className="text-4xl font-bold text-primary">G</span>
                 </div>
-                <h3 className="text-2xl font-serif font-bold text-foreground mb-4">
-                  Dal 2018
+                <h3 className="text-2xl font-bold text-foreground mb-4">
+                  Sempre Qui
                 </h3>
                 <p className="text-muted-foreground">
-                  Anni di serate, storie e drink perfetti. E questo è solo l'inizio.
+                  Anni passati insieme, tra un drink e una risata. E non ci fermiamo mica!
                 </p>
 
                 {/* Stats */}

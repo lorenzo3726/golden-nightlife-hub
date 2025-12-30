@@ -15,13 +15,13 @@ const Footer = () => {
       <div className="relative z-10 container mx-auto px-4">
         <div className="flex flex-col items-center text-center space-y-8">
           {/* Logo */}
-          <h2 className="text-3xl font-serif font-bold text-primary">
+          <h2 className="text-3xl font-bold text-primary">
             GOLDEN BAR
           </h2>
 
           {/* Tagline */}
-          <p className="text-lg md:text-xl font-serif italic text-muted-foreground max-w-md">
-            "Perché la notte migliore è sempre quella che stai per vivere."
+          <p className="text-lg md:text-xl text-muted-foreground max-w-md">
+            "Drink buoni, bella musica e la compagnia giusta."
           </p>
 
           {/* Social Links */}
