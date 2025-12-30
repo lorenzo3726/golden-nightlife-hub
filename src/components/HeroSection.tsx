@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
-import heroBg from '@/assets/hero-bg-new.jpg';
+import heroBg from '@/assets/hero-friends.png';
 
 const HeroSection = () => {
   const scrollToGoldenHour = () => {
