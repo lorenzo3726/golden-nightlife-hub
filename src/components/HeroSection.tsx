@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
+import { motion } from 'framer-motion';
 import heroBg from '@/assets/hero-friends-night.png';
 
 const HeroSection = () => {
@@ -22,7 +23,17 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <motion.div
+        className="relative z-10 container mx-auto px-4 text-center"
+        initial={{ opacity: 0, y: 100, rotateX: 20, scale: 0.9 }}
+        animate={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
+        transition={{
+          duration: 1.2,
+          ease: [0.16, 1, 0.3, 1], // Custom cubic-bezier for a smooth entrance
+          delay: 0.2
+        }}
+        style={{ perspective: 1000 }}
+      >
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Pre-title */}
           <div className="opacity-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
@@ -73,7 +84,7 @@ const HeroSection = () => {
             </Button>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 w-full flex justify-center opacity-0 animate-fade-in" style={{ animationDelay: '1.2s' }}>

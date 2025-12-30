@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import drinkTropical from '@/assets/drink-tropical.jpg';
 
 const drink1 = "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80";
@@ -47,11 +48,23 @@ const DrinksSection = () => {
         {/* Drinks Grid */}
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {drinks.map((drink, index) => (
-            <div
+            <motion.div
               key={drink.name}
               className="group relative"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{
+                y: -10,
+                rotateX: 5,
+                rotateY: 5,
+                scale: 1.02,
+                transition: { duration: 0.3 }
+              }}
+              style={{ perspective: 1000 }}
             >
-              <div className="card-glass rounded-2xl overflow-hidden transition-all duration-500 hover:scale-105 hover:glow-gold-subtle">
+              <div className="card-glass rounded-2xl overflow-hidden transition-all duration-500 hover:glow-gold-subtle">
                 {/* Image */}
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <img
@@ -75,7 +88,7 @@ const DrinksSection = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
